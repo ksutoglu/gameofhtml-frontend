@@ -50,7 +50,6 @@ function HomePage() {
       list = list.filter(game => game.genres?.includes(genre));
     }
   
-    // Arama terimine göre filtrele
     if (searchTerm.trim() !== "") {
       list = list.filter(game =>
         game.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -58,7 +57,8 @@ function HomePage() {
     }
   
     setFilteredGames(list);
-  }, []);
+  }, [favorites, games, searchTerm]); // ✅ buraya dikkat
+  
   
   useEffect(() => {
     handleFilter(selectedGenre);
