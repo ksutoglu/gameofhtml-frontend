@@ -22,7 +22,7 @@ function PlayPage() {
       .then(res => res.json())
       .then(data => setComments(data))
       .catch(err => console.error("Yorumlar alınamadı:", err));
-  }, [gameId]);
+  }, [api, gameId]);
 
   // Yorum gönder
   const handleSubmit = (e) => {

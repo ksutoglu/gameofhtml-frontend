@@ -36,7 +36,7 @@ function HomePage() {
         });
         setGenres(["Hepsi", "Favoriler", ...Array.from(allGenres)]);
       });
-  }, []);
+  }, [api]);
 
   // Filtre değişince oyunları süz
   const handleFilter = (genre) => {
@@ -61,7 +61,7 @@ function HomePage() {
   
   useEffect(() => {
     handleFilter(selectedGenre);
-  }, [searchTerm]);
+  }, [handleFilter, selectedGenre]);
   
 
   // Favori ekle/çıkar
