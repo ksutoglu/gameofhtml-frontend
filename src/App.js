@@ -79,10 +79,10 @@ function HomePage() {
 
   // Favori mi kontrolü
   const isFavorite = (gameId) => favorites.includes(gameId);
-
+//Game of HTML 🎮
   return (
     <Container className="mt-4">
-      <h1 className="text-center mb-4">Game of HTML 🎮</h1>
+      <h1 className="text-center mb-4">Seni Çok Seviyorum Mi Gillian ❤️❤️❤️</h1>
 
       <input
   type="text"
