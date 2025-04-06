@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useCallback } from "react";
 import {
   Container, Row, Col, Card, Button,
   Badge, ButtonGroup
@@ -39,7 +40,7 @@ function HomePage() {
   }, [api]);
 
   // Filtre değişince oyunları süz
-  const handleFilter = (genre) => {
+  const handleFilter = useCallback((genre) => {
     setSelectedGenre(genre);
     let list = [...games];
   
@@ -57,7 +58,7 @@ function HomePage() {
     }
   
     setFilteredGames(list);
-  };
+  }, []);
   
   useEffect(() => {
     handleFilter(selectedGenre);
