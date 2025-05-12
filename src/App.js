@@ -105,7 +105,7 @@ function HomePage() {
             onClick={() => handleFilter(genre)}
             className="m-1"
           >
-            {t(`genres.${genre}`, genre)}
+            {t(`genres.${genre}`, { defaultValue: genre })}
           </Button>
         ))}
       </ButtonGroup>
@@ -138,7 +138,8 @@ function HomePage() {
                 </Card.Text>
                 {game.genres?.map((genre, i) => (
                   <Badge bg="info" className="me-1" key={i}>
-                    {t(`genres.${genre}`, genre)}
+                    {t(`genres.${genre}`, { defaultValue: genre })}
+
                   </Badge>
                 ))}
               </Card.Body>
