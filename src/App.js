@@ -139,7 +139,6 @@ function HomePage() {
                 {game.genres?.map((genre, i) => (
                   <Badge bg="info" className="me-1" key={i}>
                     {t(`genres.${genre}`, { defaultValue: genre })}
-
                   </Badge>
                 ))}
               </Card.Body>
