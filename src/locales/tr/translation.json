@@ -1,0 +1,36 @@
+{
+  "title": "Game of HTML 🎮",
+  "search": "Oyun adıyla ara...",
+  "play": "Oyunu Oyna",
+  "howToPlay": "Nasıl Oynanır",
+  "genres" : {
+    "Hepsi" : "Hepsi",
+    "Favoriler" : "Favoriler",
+    "Casual": "Gündelik",
+    "Boardgames": "Zeka Oyunları",
+    "Shooter": "Atış",
+    "Simulation": "Simülasyon",
+    "Racing & Driving": "Yarış & Sürüş",
+    "Battle": "Savaş",
+    "Football": "Futbol",
+    "Agility": "Çeviklik",
+    "Care": "Bakım",
+    "Puzzle": "Bulmaca",
+    "Adventure": "Macera",
+    "Basketball": "Basketbol",
+    "Sports": "Spor",
+    ".IO": ".IO Oyunları",
+    "Strategy": "Strateji",
+    "Cooking": "Yemek",
+    "Mahjong & Connect": "Mahjong & Eşleştirme",
+    "Merge": "Birleştir",
+    "Dress-up": "Giydirme",
+    "Quiz": "Test",
+    "Art": "Sanat",
+    "Educational": "Eğitici",
+    "Match-3": "Eşleştir-3",
+    "Cards": "Kartlar",
+    "Jigsaw": "Yapboz"
+ }
+}
+    
