@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import './i18n';
-import { useTranslation } from 'react-i18next';
 import {
   Container, Row, Col, Card, Button,
   Badge, ButtonGroup
@@ -16,7 +14,6 @@ import PlayPage from "./PlayPage";
 function HomePage() {
   const [games, setGames] = useState([]);
   const [filteredGames, setFilteredGames] = useState([]);
-  const { t, i18n } = useTranslation();
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("Hepsi");
   const [favorites, setFavorites] = useState([]);
@@ -82,17 +79,12 @@ function HomePage() {
 
   return (
     <Container className="mt-4">
-      <h1 className="text-center mb-4">{t("title")}</h1>
-
-      <ButtonGroup className="mb-3">
-        <Button onClick={() => i18n.changeLanguage('tr')}>🇹🇷 Türkçe</Button>
-        <Button onClick={() => i18n.changeLanguage('es')}>🇪🇸 Español</Button>
-      </ButtonGroup>
+      <h1 className="text-center mb-4">Game of HTML 🎮</h1>
 
       <input
         type="text"
         className="form-control mb-3"
-        placeholder={t("search")}
+        placeholder="Oyun adıyla ara..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
@@ -105,7 +97,7 @@ function HomePage() {
             onClick={() => handleFilter(genre)}
             className="m-1"
           >
-            {t(`genres.${genre}`, { defaultValue: genre })}
+            {genre}
           </Button>
         ))}
       </ButtonGroup>
@@ -133,12 +125,12 @@ function HomePage() {
                 </Card.Title>
                 <Card.Text>{game.description?.substring(0, 100)}...</Card.Text>
                 <Card.Text>
-                  <strong>{t("howToPlay")}:</strong><br />
+                  <strong>Nasıl Oynanır:</strong><br />
                   {game.instructions?.substring(0, 80)}...
                 </Card.Text>
                 {game.genres?.map((genre, i) => (
                   <Badge bg="info" className="me-1" key={i}>
-                    {t(`genres.${genre}`, { defaultValue: genre })}
+                    {genre}
                   </Badge>
                 ))}
               </Card.Body>
@@ -153,7 +145,7 @@ function HomePage() {
                     }
                   })}
                 >
-                  {t("play")}
+                  Oyunu Oyna
                 </Button>
               </Card.Footer>
             </Card>
